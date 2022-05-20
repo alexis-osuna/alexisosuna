@@ -48,7 +48,7 @@ const Header = () => {
       <nav className="flex items-center justify-between h-24">
         <ul className="hidden space-x-4 text-lg md:flex">
           {content.nav.map((e, id) => (
-            <li key={id}>
+            <li className="hover:underline underline-offset-4" key={id}>
               <Link href={e.href}>{e.name}</Link>
             </li>
           ))}
