@@ -12,16 +12,16 @@ const content = {
       href: "/",
     },
     {
+      name: "About",
+      href: "/about",
+    },
+    {
+      name: "Tech",
+      href: "/tech",
+    },
+    {
       name: "Blog",
       href: "/blog",
-    },
-    {
-      name: "Signatures",
-      href: "/signatures",
-    },
-    {
-      name: "Design",
-      href: "/design",
     },
     {
       name: "Music",
