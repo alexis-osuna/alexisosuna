@@ -7,7 +7,7 @@ import Menu from "./Menu";
 
 import content from "data/content";
 
-const Header = () => {
+const Header: React.FC = () => {
   const [menu, setMenu] = useState(false);
   const [mounted, setMounted] = useState(false);
   const { systemTheme, theme, setTheme } = useTheme();
@@ -46,7 +46,7 @@ const Header = () => {
   return (
     <header className="w-full">
       <nav className="flex items-center justify-between h-24">
-        <ul className="hidden space-x-4 text-lg md:flex">
+        <ul className="hidden space-x-8 text-lg md:flex">
           {content.nav.map((e, id) => (
             <li className="hover:underline underline-offset-4" key={id}>
               <Link href={e.href}>{e.name}</Link>

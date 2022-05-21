@@ -16,6 +16,14 @@ const content = {
       href: "/blog",
     },
     {
+      name: "Signatures",
+      href: "/signatures",
+    },
+    {
+      name: "Design",
+      href: "/design",
+    },
+    {
       name: "Music",
       href: "/music",
     },

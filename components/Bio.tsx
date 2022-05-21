@@ -3,9 +3,9 @@ import Image from "next/image";
 
 import content from "data/content";
 
-const Bio = () => {
+const Bio: React.FC = () => {
   return (
-    <section className="flex flex-col items-center p-0 text-center sm:p-8">
+    <section className="flex flex-col items-center p-8 text-center">
       <div className="relative w-24 h-24 sm:w-32 sm:h-32">
         <Image
           className="rounded-full"
