@@ -10,8 +10,8 @@ const about = () => {
         {content.about.title}
       </h1>
       <p>{content.about.description}</p>
-      {content.about.sections.map((e) => (
-        <div className="mt-8">
+      {content.about.sections.map((e, id) => (
+        <div key={id} className="mt-8">
           <h2 className="text-xl font-bold sm:text-2xl">{e.title}</h2>
           <p>{e.description}</p>
         </div>
