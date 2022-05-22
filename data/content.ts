@@ -30,12 +30,16 @@ const content = {
   about: {
     title: "About me",
     description:
-      "Hi, my name is Alexis. I started programming a couple year ago and in the process I discovered the most exciting industry in the world.",
+      "Hi, my name is Alexis. I started programming a couple of year ago and in the process I discovered the most exciting industry in the world.",
     sections: [
       { title: "Education", description: "lmao" },
       { title: "Gear", description: "Cheapest M1 Macbook Pro" },
     ],
     image: "/avatar.jpg",
+  },
+  blog: {
+    title: "Blog",
+    description: "Random thoughts... take them with a grain of salt.",
   },
   copyright: "Copyright © 2022 Alexis Osuna. All rights reserved.",
 };
