@@ -19,9 +19,7 @@ const Footer: React.FC = () => {
           ))}
         </ul>
       </nav>
-      <p className="text-sm">
-        Copyright © 2022 Alexis Osuna. All rights reserved.
-      </p>
+      <p className="text-sm">{content.copyright}</p>
     </footer>
   );
 };

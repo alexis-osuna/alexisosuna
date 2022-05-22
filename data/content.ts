@@ -3,8 +3,7 @@ const content = {
     name: "Alexis Osuna",
     label: "Full Stack Web Developer",
     description: "Trying to keep up with all this shit!",
-    image:
-      "https://i2-prod.dailystar.co.uk/incoming/article22323374.ece/ALTERNATES/s615/1_Johnny-Depp.jpg",
+    image: "/avatar.jpg",
   },
   nav: [
     {
@@ -28,6 +27,17 @@ const content = {
       href: "/music",
     },
   ],
+  about: {
+    title: "About me",
+    description:
+      "Hi, my name is Alexis. I started programming a couple year ago and in the process I discovered the most exciting industry in the world.",
+    sections: [
+      { title: "Education", description: "lmao" },
+      { title: "Gear", description: "Cheapest M1 Macbook Pro" },
+    ],
+    image: "/avatar.jpg",
+  },
+  copyright: "Copyright © 2022 Alexis Osuna. All rights reserved.",
 };
 
 export default content;
