@@ -10,7 +10,7 @@ const CurrentlyPlaying: React.FC = () => {
   return (
     <div className="p-4 mb-8 border rounded border-neutral-500">
       {data?.url ? (
-        <a target="_blank" href={data.url}>
+        <a href={data.url} target="_blank" rel="noreferrer">
           <div className="grid sm:grid-cols-2">
             <div className="relative w-full h-48 mb-4 sm:mb-0">
               <Image

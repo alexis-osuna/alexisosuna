@@ -15,7 +15,7 @@ const TopTracks: React.FC = () => {
   return (
     <ul className="grid sm:grid-cols-2">
       {data.tracks.map((e, id) => (
-        <a key={id} target="_blank" href={e.url}>
+        <a key={id} href={e.url} target="_blank" rel="noreferrer">
           <li className="grid grid-cols-2 mb-4">
             <div className="relative w-full h-36">
               <Image
