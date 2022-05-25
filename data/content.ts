@@ -37,16 +37,26 @@ const content = {
     ],
     image: "/avatar.jpg",
   },
+  tech: {
+    title: "Tech",
+    description: "Tech I use, I've used and want to use.",
+  },
   blog: {
     title: "Blog",
-    description: "Random thoughts... take them with a grain of salt.",
+    description: "Random thoughts...",
   },
   music: {
     title: "Music",
     description: "What I'm currently listening to (probably Yeat).",
   },
-  socials: [{ name: "Github", href: "/alexis-osuna" }],
+  notFound: {
+    title: "Oops...",
+    description: "Watch where u r going!",
+    link: { name: "go back", href: "/" },
+  },
+  notPlaying: "not listening to music rn... :(",
   footer: "Website obviously inspired by Lee Robinson.",
+  socials: [{ name: "Github", href: "/alexis-osuna" }],
   copyright: "Copyright © 2022 Alexis Osuna. All rights reserved.",
 };
 

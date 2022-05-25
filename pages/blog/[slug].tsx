@@ -2,6 +2,8 @@ import Head from "next/head";
 import { format, parseISO } from "date-fns";
 import { allPosts } from "contentlayer/generated";
 
+import Container from "components/Container";
+
 export async function getStaticPaths() {
   const paths = allPosts.map((post) => post.url);
   return {
@@ -25,7 +27,7 @@ const PostLayout = ({ post }: any) => {
       <Head>
         <title>{post.title}</title>
       </Head>
-      <article className="py-8 pt-0 sm:pt-8">
+      <Container>
         <div className="mb-8 text-center">
           <h1 className="text-2xl font-bold sm:text-4xl">{post.title}</h1>
           <time
@@ -39,7 +41,7 @@ const PostLayout = ({ post }: any) => {
           className=""
           dangerouslySetInnerHTML={{ __html: post.body.html }}
         />
-      </article>
+      </Container>
     </>
   );
 };

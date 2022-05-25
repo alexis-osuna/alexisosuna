@@ -2,6 +2,9 @@ import React from "react";
 import Image from "next/image";
 import Head from "next/head";
 
+import Heading from "components/Heading";
+import Container from "components/Container";
+
 import content from "data/content";
 
 const about = () => {
@@ -10,16 +13,16 @@ const about = () => {
       <Head>
         <title>{content.about.title}</title>
       </Head>
-      <div className="py-8 pt-0 sm:pt-8">
-        <h1 className="mb-4 text-2xl font-bold sm:text-4xl">
-          {content.about.title}
-        </h1>
-        <p className="mb-8 text-neutral-500">{content.about.description}</p>
+      <Container>
+        <Heading
+          title={content.about.title}
+          description={content.about.description}
+        />
         {content.about.sections.map((e, id) => (
-          <div key={id} className="mb-8">
+          <section key={id} className="mb-8">
             <h2 className="mb-4 text-xl font-bold sm:text-2xl">{e.title}</h2>
             <p className="text-neutral-500">{e.description}</p>
-          </div>
+          </section>
         ))}
         <div className="relative w-full h-64">
           <Image
@@ -29,7 +32,7 @@ const about = () => {
             alt="Alexis Osuna"
           />
         </div>
-      </div>
+      </Container>
     </>
   );
 };

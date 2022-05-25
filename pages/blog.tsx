@@ -3,6 +3,8 @@ import Head from "next/head";
 import { compareDesc } from "date-fns";
 import { allPosts } from "contentlayer/generated";
 
+import Heading from "components/Heading";
+import Container from "components/Container";
 import PostCard from "components/PostCard";
 
 import content from "data/content";
@@ -20,15 +22,15 @@ const blog = ({ posts }) => {
       <Head>
         <title>{content.blog.title}</title>
       </Head>
-      <div className="py-8 pt-0 sm:pt-8">
-        <h1 className="mb-4 text-2xl font-bold sm:text-4xl">
-          {content.blog.title}
-        </h1>
-        <p className="mb-8 text-neutral-500">{content.blog.description}</p>
+      <Container>
+        <Heading
+          title={content.blog.title}
+          description={content.blog.description}
+        />
         {posts.map((post, id) => (
           <PostCard key={id} post={post} />
         ))}
-      </div>
+      </Container>
     </>
   );
 };

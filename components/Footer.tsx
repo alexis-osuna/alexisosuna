@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
           ))}
         </ul>
       </nav>
-      <p className="text-sm">{content.footer}</p>
+      <p className="text-sm">{content.copyright}</p>
     </footer>
   );
 };

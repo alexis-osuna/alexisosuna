@@ -13,26 +13,29 @@ const TopTracks: React.FC = () => {
   }
 
   return (
-    <ul className="grid sm:grid-cols-2">
-      {data.tracks.map((e, id) => (
-        <a key={id} href={e.url} target="_blank" rel="noreferrer">
-          <li className="grid grid-cols-2 mb-4">
-            <div className="relative w-full h-36">
-              <Image
-                src={e.image}
-                layout="fill"
-                objectFit="contain"
-                alt={e.album}
-              />
-            </div>
-            <div className="flex flex-col justify-center text-center">
-              <p>{e.title}</p>
-              <p className="text-neutral-500">{e.artist}</p>
-            </div>
-          </li>
-        </a>
-      ))}
-    </ul>
+    <section>
+      <h2 className="mb-4 text-xl font-bold sm:text-2xl">Top tracks</h2>
+      <ul className="grid sm:grid-cols-2">
+        {data.tracks.map((e, id) => (
+          <a key={id} href={e.url} target="_blank" rel="noreferrer">
+            <li className="grid grid-cols-2 mb-4">
+              <div className="relative w-full h-36">
+                <Image
+                  src={e.image}
+                  layout="fill"
+                  objectFit="contain"
+                  alt={e.album}
+                />
+              </div>
+              <div className="flex flex-col justify-center text-center">
+                <p>{e.title}</p>
+                <p className="text-neutral-500">{e.artist}</p>
+              </div>
+            </li>
+          </a>
+        ))}
+      </ul>
+    </section>
   );
 };
 
