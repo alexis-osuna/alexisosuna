@@ -1,8 +1,8 @@
 const content = {
   bio: {
     name: "Alexis Osuna",
-    label: "Full Stack Web Developer",
-    description: "Trying to keep up with all this shit!",
+    label: "Web Developer",
+    description: "Trying to keep up with all this tech!",
     image: "/avatar.jpg",
   },
   nav: [
@@ -30,7 +30,7 @@ const content = {
   about: {
     title: "About me",
     description:
-      "Hi, my name is Alexis. I started programming a couple of year ago and in the process I discovered the most exciting industry in the world.",
+      "Hi, my name is Alexis. I started programming a couple of year ago and now I'm sad and depressed.",
     sections: [
       { title: "Education", description: "lmao" },
       { title: "Gear", description: "Cheapest M1 Macbook Pro" },
@@ -41,6 +41,12 @@ const content = {
     title: "Blog",
     description: "Random thoughts... take them with a grain of salt.",
   },
+  music: {
+    title: "Music",
+    description: "What I'm currently listening to (probably Yeat).",
+  },
+  socials: [{ name: "Github", href: "/alexis-osuna" }],
+  footer: "Website obviously inspired by Lee Robinson.",
   copyright: "Copyright © 2022 Alexis Osuna. All rights reserved.",
 };
 

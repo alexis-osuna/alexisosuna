@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { useTheme } from "next-themes";
 import { SunIcon, MoonIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
 
@@ -8,6 +9,7 @@ import Menu from "./Menu";
 import content from "data/content";
 
 const Header: React.FC = () => {
+  const router = useRouter();
   const [menu, setMenu] = useState(false);
   const [mounted, setMounted] = useState(false);
   const { systemTheme, theme, setTheme } = useTheme();
@@ -46,11 +48,17 @@ const Header: React.FC = () => {
   return (
     <header className="w-full">
       <nav className="flex items-center justify-between h-24">
-        <ul className="hidden space-x-8 text-lg md:flex">
+        <ul className="hidden space-x-8 md:flex">
           {content.nav.map((e, id) => (
             <li key={id}>
               <Link href={e.href}>
-                <a className="hover:underline underline-offset-4">{e.name}</a>
+                <a
+                  className={`${
+                    router.asPath === e.href ? "underline" : ""
+                  } hover:underline underline-offset-4`}
+                >
+                  {e.name}
+                </a>
               </Link>
             </li>
           ))}

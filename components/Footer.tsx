@@ -6,7 +6,7 @@ import content from "../data/content";
 const Footer: React.FC = () => {
   return (
     <footer className="w-full mb-8">
-      <nav className="py-8 border-t-2 border-neutral-400">
+      <nav className="py-8 border-t border-neutral-500">
         <ul className="grid grid-cols-2 sm:grid-cols-3">
           {content.nav.map((e, id) => (
             <li key={id} className="p-2">
@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
           ))}
         </ul>
       </nav>
-      <p className="text-sm">{content.copyright}</p>
+      <p className="text-sm">{content.footer}</p>
     </footer>
   );
 };

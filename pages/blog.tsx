@@ -14,19 +14,19 @@ export async function getStaticProps() {
   return { props: { posts } };
 }
 
-const blog = ({ posts }: any) => {
+const blog = ({ posts }) => {
   return (
     <>
       <Head>
         <title>{content.blog.title}</title>
       </Head>
       <div className="py-8 pt-0 sm:pt-8">
-        <h1 className="mb-8 text-2xl font-bold sm:text-4xl">
+        <h1 className="mb-4 text-2xl font-bold sm:text-4xl">
           {content.blog.title}
         </h1>
         <p className="mb-8 text-neutral-500">{content.blog.description}</p>
-        {posts.map((post: any, id: any) => (
-          <PostCard key={id} {...post} />
+        {posts.map((post, id) => (
+          <PostCard key={id} post={post} />
         ))}
       </div>
     </>
