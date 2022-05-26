@@ -13,11 +13,6 @@ const NotFound = () => {
         title={content.notFound.title}
         description={content.notFound.description}
       />
-      <Link href={content.notFound.link.href}>
-        <a className="hover:underline underline-offset-4">
-          {content.notFound.link.name}
-        </a>
-      </Link>
     </Container>
   );
 };
