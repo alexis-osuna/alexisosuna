@@ -10,9 +10,9 @@ import content from "data/content";
 const CurrentlyPlaying: React.FC = () => {
   const { data } = useSWR<Track>("/api/spotify/currently-playing", fetcher);
   return (
-    <section>
+    <section className="mb-8">
       <h2 className="mb-4 text-xl font-bold sm:text-2xl">Currently playing</h2>
-      <div className="p-4 mb-8 border rounded border-neutral-500">
+      <div className="p-4 border rounded border-neutral-500">
         {data?.url ? (
           <a href={data.url} target="_blank" rel="noreferrer">
             <div className="grid sm:grid-cols-2">

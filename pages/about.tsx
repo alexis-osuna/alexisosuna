@@ -4,6 +4,7 @@ import Head from "next/head";
 
 import Heading from "components/Heading";
 import Container from "components/Container";
+import Section from "components/Section";
 
 import content from "data/content";
 
@@ -18,13 +19,10 @@ const about = () => {
           title={content.about.title}
           description={content.about.description}
         />
-        {content.about.sections.map((e, id) => (
-          <section key={id} className="mb-8">
-            <h2 className="mb-4 text-xl font-bold sm:text-2xl">{e.title}</h2>
-            <p className="text-neutral-500">{e.description}</p>
-          </section>
+        {content.about.sections.map(({ title, description }, id) => (
+          <Section key={id} title={title} description={description} />
         ))}
-        <div className="relative w-full h-64">
+        <div className="relative w-full h-64 mb-8">
           <Image
             src={content.about.image}
             layout="fill"

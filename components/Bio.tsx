@@ -5,7 +5,7 @@ import content from "data/content";
 
 const Bio: React.FC = () => {
   return (
-    <section className="flex flex-col items-center text-center">
+    <section className="flex flex-col items-center mb-8 text-center">
       <div className="relative w-24 h-24 sm:w-32 sm:h-32">
         <Image
           className="rounded-full"

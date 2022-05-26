@@ -2,7 +2,12 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useTheme } from "next-themes";
-import { SunIcon, MoonIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
+import {
+  HiOutlineSun,
+  HiOutlineMoon,
+  HiOutlineMenu,
+  HiOutlineX,
+} from "react-icons/hi";
 
 import Menu from "./Menu";
 
@@ -28,7 +33,7 @@ const Header: React.FC = () => {
 
     if (currentTheme === "dark") {
       return (
-        <SunIcon
+        <HiOutlineSun
           className="w-8 h-8"
           role="button"
           onClick={() => setTheme("light")}
@@ -36,7 +41,7 @@ const Header: React.FC = () => {
       );
     } else {
       return (
-        <MoonIcon
+        <HiOutlineMoon
           className="w-8 h-8"
           role="button"
           onClick={() => setTheme("dark")}
@@ -49,15 +54,15 @@ const Header: React.FC = () => {
     <header className="w-full">
       <nav className="flex items-center justify-between h-24">
         <ul className="hidden space-x-8 md:flex">
-          {content.nav.map((e, id) => (
+          {content.nav.map(({ name, href }, id) => (
             <li key={id}>
-              <Link href={e.href}>
+              <Link href={href}>
                 <a
                   className={`${
-                    router.asPath === e.href ? "underline" : ""
+                    router.asPath === href ? "underline" : ""
                   } hover:underline underline-offset-4`}
                 >
-                  {e.name}
+                  {name}
                 </a>
               </Link>
             </li>
@@ -65,9 +70,9 @@ const Header: React.FC = () => {
         </ul>
         <div className="flex cursor-pointer md:hidden" onClick={toggleMenu}>
           {menu ? (
-            <XIcon className="w-8 h-8" role="button" />
+            <HiOutlineX className="w-8 h-8" role="button" />
           ) : (
-            <MenuIcon className="w-8 h-8" role="button" />
+            <HiOutlineMenu className="w-8 h-8" role="button" />
           )}
         </div>
         {menu ? <Menu hideMenu={hideMenu} /> : null}

@@ -15,14 +15,14 @@ const RecentlyPlayed: React.FC = () => {
   }
 
   return (
-    <section>
+    <section className="mb-8">
       <h2 className="mb-4 text-xl font-bold sm:text-2xl">Recently played</h2>
-      <ul className="mb-8">
-        {data.tracks.map((e, id) => (
-          <a key={id} href={e.url} target="_blank" rel="noreferrer">
+      <ul>
+        {data.tracks.map(({ title, artist, url }, id) => (
+          <a key={id} href={url} target="_blank" rel="noreferrer">
             <li className="mb-4 border-b border-neutral-500">
-              <p>{e.title}</p>
-              <p className="mb-4 text-neutral-500">{e.artist}</p>
+              <p>{title}</p>
+              <p className="mb-4 text-neutral-500">{artist}</p>
             </li>
           </a>
         ))}

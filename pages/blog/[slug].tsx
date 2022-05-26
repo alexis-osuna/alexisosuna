@@ -1,8 +1,7 @@
 import Head from "next/head";
-import { format, parseISO } from "date-fns";
 import { allPosts } from "contentlayer/generated";
 
-import Container from "components/Container";
+import Post from "components/Post";
 
 export async function getStaticPaths() {
   const paths = allPosts.map((post) => post.url);
@@ -21,27 +20,13 @@ export async function getStaticProps({ params }: any) {
   };
 }
 
-const PostLayout = ({ post }: any) => {
+const PostLayout = ({ post }) => {
   return (
     <>
       <Head>
         <title>{post.title}</title>
       </Head>
-      <Container>
-        <div className="mb-8 text-center">
-          <h1 className="text-2xl font-bold sm:text-4xl">{post.title}</h1>
-          <time
-            dateTime={post.date}
-            className="text-sm text-neutral-500 sm:text-base"
-          >
-            {format(parseISO(post.date), "LLLL d, yyyy")}
-          </time>
-        </div>
-        <div
-          className=""
-          dangerouslySetInnerHTML={{ __html: post.body.html }}
-        />
-      </Container>
+      <Post post={post} />
     </>
   );
 };
