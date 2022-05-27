@@ -1,14 +1,13 @@
 import React from "react";
 import Image from "next/image";
 import useSWR from "swr";
-
-import fetcher from "lib/fetcher";
 import { Track } from "lib/types";
+import fetcher from "lib/fetcher";
 
 import content from "data/content";
 
 const CurrentlyPlaying: React.FC = () => {
-  const { data } = useSWR<Track>("/api/spotify/currently-playing", fetcher);
+  const { data } = useSWR<Track>("/api/currently-playing", fetcher);
   return (
     <section className="mb-8">
       <h2 className="mb-4 text-xl font-bold sm:text-2xl">Currently playing</h2>
@@ -24,14 +23,16 @@ const CurrentlyPlaying: React.FC = () => {
                   alt={data.album}
                 />
               </div>
-              <div className="flex flex-col items-center justify-center text-center sm:text-left sm:items-start">
+              <div className="flex flex-col justify-center text-center sm:text-left">
                 <p>{data.title}</p>
                 <p className="text-neutral-500">{data.artist}</p>
               </div>
             </div>
           </a>
         ) : (
-          <div>{content.notPlaying}</div>
+          <div className="flex items-center justify-center h-48 text-center">
+            {content.notPlaying}
+          </div>
         )}
       </div>
     </section>

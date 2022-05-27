@@ -1,24 +1,23 @@
 import React from "react";
 import Image from "next/image";
-import useSWR from "swr";
+import { Track } from "lib/types";
 
-import fetcher from "lib/fetcher";
-import { TopTracks } from "lib/types";
+interface Props {
+  tracks: Track[];
+}
 
-const TopTracks: React.FC = () => {
-  const { data } = useSWR<TopTracks>("/api/spotify/top-tracks", fetcher);
-
-  if (!data) {
+const TopTracks: React.FC<Props> = ({ tracks }) => {
+  if (!tracks) {
     return null;
   }
 
   return (
     <section className="mb-8">
       <h2 className="mb-4 text-xl font-bold sm:text-2xl">Top tracks</h2>
-      <ul className="grid sm:grid-cols-2">
-        {data.tracks.map(({ title, artist, album, image, url }, id) => (
+      <ul className="grid gap-4 sm:grid-cols-2">
+        {tracks.map(({ title, artist, album, image, url }, id) => (
           <a key={id} href={url} target="_blank" rel="noreferrer">
-            <li className="grid grid-cols-2 mb-4">
+            <li className="grid grid-cols-2">
               <div className="relative w-full h-36">
                 <Image
                   src={image}

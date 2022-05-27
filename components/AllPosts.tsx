@@ -1,7 +1,7 @@
 import React from "react";
 import { Post } from "contentlayer/generated";
 
-import PostCard from "components/PostCard";
+import PostCard from "./PostCard";
 
 interface Props {
   posts: Post[];

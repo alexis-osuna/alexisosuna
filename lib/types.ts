@@ -6,10 +6,8 @@ export type Track = {
   url: string;
 };
 
-export type RecentlyPlayed = {
-  tracks: Track[];
-};
-
-export type TopTracks = {
-  tracks: Track[];
+export type Artist = {
+  name: string;
+  image: string;
+  url: string;
 };
