@@ -55,7 +55,7 @@ const content = {
           },
           {
             name: "Typescript",
-            comment: "love it.",
+            comment: "<3.",
             icon: <SiTypescript color="#3178C6" />,
           },
           {
@@ -77,7 +77,7 @@ const content = {
         ],
       },
       {
-        title: "For this website",
+        title: "On this website",
         list: [
           { name: "Typescript", icon: <SiTypescript color="#3178C6" /> },
           { name: "NextJs", icon: <SiNextdotjs /> },
@@ -98,12 +98,9 @@ const content = {
   notFound: {
     title: "Oops...",
     description: "Watch where u r going!",
-    link: { name: "go back", href: "/" },
   },
   notPlaying: "not listening to music rn... :(",
-  email: "hi@alexisosuna.dev",
   socials: [{ name: "Github", href: "https://github.com/alexis-osuna" }],
-  footer: "Website obviously inspired by Lee Robinson.",
   copyright: "© 2022 Alexis Osuna. All rights reserved.",
 };
 

@@ -12,7 +12,7 @@ const CurrentlyPlaying: React.FC = () => {
   return (
     <section className="mb-8">
       <h2 className="mb-4 text-xl font-bold sm:text-2xl">Currently playing</h2>
-      <div className="p-4 border rounded border-neutral-500">
+      <div className="p-4 border-2 rounded border-neutral-500">
         {data?.url ? (
           <a href={data.url} target="_blank" rel="noreferrer">
             <div className="grid sm:grid-cols-2">
