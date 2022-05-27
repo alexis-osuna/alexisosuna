@@ -1,12 +1,11 @@
-import React from "react";
-import Link from "next/link";
+import type { NextPage } from "next";
 
 import Heading from "components/Heading";
 import Container from "components/Container";
 
 import content from "data/content";
 
-const NotFound = () => {
+const NotFound: NextPage = () => {
   return (
     <Container>
       <Heading

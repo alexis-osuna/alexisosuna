@@ -1,6 +1,6 @@
-import React from "react";
-import Image from "next/image";
 import Head from "next/head";
+import Image from "next/image";
+import type { NextPage } from "next";
 
 import Heading from "components/Heading";
 import Container from "components/Container";
@@ -8,7 +8,7 @@ import Section from "components/Section";
 
 import content from "data/content";
 
-const about = () => {
+const About: NextPage = () => {
   return (
     <>
       <Head>
@@ -35,4 +35,4 @@ const about = () => {
   );
 };
 
-export default about;
+export default About;

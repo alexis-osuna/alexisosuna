@@ -1,11 +1,12 @@
-import React from "react";
 import Head from "next/head";
+import type { NextPage } from "next";
 import { compareDesc } from "date-fns";
 import { allPosts } from "contentlayer/generated";
+import { Post } from "contentlayer/generated";
 
 import Heading from "components/Heading";
 import Container from "components/Container";
-import PostCard from "components/PostCard";
+import AllPosts from "components/AllPosts";
 
 import content from "data/content";
 
@@ -16,7 +17,11 @@ export async function getStaticProps() {
   return { props: { posts } };
 }
 
-const blog = ({ posts }) => {
+interface Props {
+  posts: Post[];
+}
+
+const Blog: NextPage<Props> = ({ posts }) => {
   return (
     <>
       <Head>
@@ -27,12 +32,10 @@ const blog = ({ posts }) => {
           title={content.blog.title}
           description={content.blog.description}
         />
-        {posts.map((post, id) => (
-          <PostCard key={id} post={post} />
-        ))}
+        <AllPosts posts={posts} />
       </Container>
     </>
   );
 };
 
-export default blog;
+export default Blog;

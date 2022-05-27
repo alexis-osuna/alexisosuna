@@ -1,5 +1,5 @@
-import React from "react";
 import Head from "next/head";
+import type { NextPage } from "next";
 
 import Heading from "components/Heading";
 import Container from "components/Container";
@@ -9,7 +9,7 @@ import TopTracks from "components/TopTracks";
 
 import content from "data/content";
 
-const music = () => {
+const Music: NextPage = () => {
   return (
     <>
       <Head>
@@ -28,4 +28,4 @@ const music = () => {
   );
 };
 
-export default music;
+export default Music;

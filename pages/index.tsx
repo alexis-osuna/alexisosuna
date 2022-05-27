@@ -1,10 +1,26 @@
-import type { NextPage } from "next";
 import Head from "next/head";
+import type { NextPage } from "next";
+import { compareDesc } from "date-fns";
+import { allPosts } from "contentlayer/generated";
+import { Post } from "contentlayer/generated";
 
 import Container from "components/Container";
 import Bio from "components/Bio";
+import LatestPosts from "components/LatestPosts";
+import CurrentlyPlaying from "components/CurrentlyPlaying";
 
-const Home: NextPage = () => {
+export async function getStaticProps() {
+  const posts = allPosts.sort((a, b) => {
+    return compareDesc(new Date(a.date), new Date(b.date));
+  });
+  return { props: { posts } };
+}
+
+interface Props {
+  posts: Post[];
+}
+
+const Home: NextPage<Props> = ({ posts }) => {
   return (
     <>
       <Head>
@@ -15,6 +31,8 @@ const Home: NextPage = () => {
       <main>
         <Container>
           <Bio />
+          <LatestPosts posts={posts} />
+          <CurrentlyPlaying />
         </Container>
       </main>
     </>

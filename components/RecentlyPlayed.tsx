@@ -20,9 +20,9 @@ const RecentlyPlayed: React.FC = () => {
       <ul>
         {data.tracks.map(({ title, artist, url }, id) => (
           <a key={id} href={url} target="_blank" rel="noreferrer">
-            <li className="mb-4 border-b border-neutral-500">
+            <li className="pb-4 mb-4 border-b border-neutral-500">
               <p>{title}</p>
-              <p className="mb-4 text-neutral-500">{artist}</p>
+              <p className="text-neutral-500">{artist}</p>
             </li>
           </a>
         ))}
