@@ -100,8 +100,10 @@ const content = {
     description: "Watch where u r going!",
   },
   notPlaying: "not listening to music rn... :(",
+  email: "hi@alexisosuna.dev",
   socials: [{ name: "Github", href: "https://github.com/alexis-osuna" }],
-  copyright: "© 2022 Alexis Osuna. All rights reserved.",
+  footer: "Website obviously inspired by Lee Robinson",
+  copyright: "© 2022 Alexis Osuna.",
 };
 
 export default content;

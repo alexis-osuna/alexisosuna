@@ -31,7 +31,8 @@ const Footer: React.FC = () => {
           ))}
         </ul>
       </nav>
-      <p className="text-sm">{content.copyright}</p>
+      <p className="mb-2 text-sm text-neutral-500">{content.footer}</p>
+      <p className="text-sm">{`${content.copyright} ${content.email}`}</p>
     </footer>
   );
 };
