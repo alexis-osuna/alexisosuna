@@ -10,7 +10,7 @@ interface Props {
 const PostCard: React.FC<Props> = ({ post }) => {
   return (
     <Link href={post.url}>
-      <div className="p-4 border-2 rounded cursor-pointer border-neutral-500">
+      <div className="py-4 border-b cursor-pointer border-neutral-500">
         <time
           dateTime={post.date}
           className="text-sm text-neutral-500 sm:text-base"

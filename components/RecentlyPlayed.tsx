@@ -16,9 +16,9 @@ const RecentlyPlayed: React.FC<Props> = ({ tracks }) => {
       <ul>
         {tracks.map(({ title, artist, url }, id) => (
           <a key={id} href={url} target="_blank" rel="noreferrer">
-            <li className="pb-4 mb-4 border-b border-neutral-500">
-              <p>{title}</p>
-              <p className="text-neutral-500">{artist}</p>
+            <li className="py-4 border-b border-neutral-500">
+              <p className="sm:text-lg">{title}</p>
+              <p className="text-sm text-neutral-500 sm:text-base">{artist}</p>
             </li>
           </a>
         ))}
