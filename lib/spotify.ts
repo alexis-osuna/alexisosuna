@@ -48,8 +48,6 @@ export const getRecentlyPlayed = async () => {
   return items.slice(0, 10).map(({ track }) => ({
     title: track.name,
     artist: track.artists.map((_artist) => _artist.name).join(", "),
-    album: track.album.name,
-    image: track.album.images[0].url,
     url: track.external_urls.spotify,
   }));
 };
@@ -66,7 +64,7 @@ export const getTopArtists = async () => {
 
   return items.slice(0, 6).map((artist) => ({
     name: artist.name,
-    image: artist.images[0].url,
+    image: artist.images[2].url,
     url: artist.external_urls.spotify,
   }));
 };
@@ -85,7 +83,7 @@ export const getTopTracks = async () => {
     title: track.name,
     artist: track.artists.map((_artist) => _artist.name).join(", "),
     album: track.album.name,
-    image: track.album.images[0].url,
+    image: track.album.images[1].url,
     url: track.external_urls.spotify,
   }));
 };

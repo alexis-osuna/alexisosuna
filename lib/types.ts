@@ -1,8 +1,8 @@
 export type Track = {
   title: string;
   artist: string;
-  album: string;
-  image: string;
+  album?: string;
+  image?: string;
   url: string;
 };
 
