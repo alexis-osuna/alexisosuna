@@ -102,7 +102,7 @@ const content = {
   notPlaying: "not listening to music rn... :(",
   email: "hi@alexisosuna.dev",
   socials: [{ name: "Github", href: "https://github.com/alexis-osuna" }],
-  footer: "Website obviously inspired by Lee Robinson",
+  footer: "Website inspired by Lee Robinson",
   copyright: "© 2022 Alexis Osuna.",
 };
 

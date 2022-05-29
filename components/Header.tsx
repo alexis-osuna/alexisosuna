@@ -23,6 +23,14 @@ const Header: React.FC = () => {
     setMounted(true);
   }, []);
 
+  useEffect(() => {
+    if (menu) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "visible";
+    }
+  }, [menu]);
+
   const toggleMenu = () => setMenu(!menu);
   const hideMenu = () => setMenu(false);
 
