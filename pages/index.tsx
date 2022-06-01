@@ -8,6 +8,7 @@ import Container from "components/Container";
 import Bio from "components/Bio";
 import LatestPosts from "components/LatestPosts";
 import CurrentlyPlaying from "components/CurrentlyPlaying";
+import Sign from "components/Sign";
 
 export async function getStaticProps() {
   const posts = allPosts.sort((a, b) => {
@@ -33,6 +34,7 @@ const Home: NextPage<Props> = ({ posts }) => {
           <Bio />
           <LatestPosts posts={posts} />
           <CurrentlyPlaying />
+          <Sign />
         </Container>
       </main>
     </>
