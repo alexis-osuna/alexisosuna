@@ -2,13 +2,15 @@ import {
   SiNextdotjs,
   SiTailwindcss,
   SiTypescript,
+  SiGo,
   SiRust,
   SiVercel,
+  SiNuxtdotjs,
   SiSvelte,
   SiVisualstudio,
   SiReact,
-  SiSupabase,
-  SiStrapi,
+  SiPrisma,
+  SiPlaystation,
 } from "react-icons/si";
 
 const content = {
@@ -43,7 +45,7 @@ const content = {
         title: "My current favourites",
         list: [
           {
-            name: "NextJs",
+            name: "Next.js",
             comment: "still learning it atm.",
             icon: <SiNextdotjs />,
           },
@@ -69,20 +71,30 @@ const content = {
         description:
           "Stuff I want to try but I'm either too lazy or haven't had a reason to.",
         list: [
+          { name: "Rust", icon: <SiRust /> },
+          { name: "Go", icon: <SiGo color="#00ADD8" /> },
+          {
+            name: "React Native",
+            comment: "too lazy!!",
+            icon: <SiReact color="#61DAFB" />,
+          },
+          { name: "Nuxt", icon: <SiNuxtdotjs color="#00DC82" /> },
           { name: "Svelte", icon: <SiSvelte color="#FF3E00" /> },
-          { name: "Rust", comment: "too lazy!!", icon: <SiRust /> },
-          { name: "React Native", icon: <SiReact color="#61DAFB" /> },
-          { name: "Supabase", icon: <SiSupabase color="#3ECF8E" /> },
-          { name: "Strapi", icon: <SiStrapi color="#2F2E8B" /> },
         ],
       },
       {
         title: "On this website",
         list: [
           { name: "Typescript", icon: <SiTypescript color="#3178C6" /> },
-          { name: "NextJs", icon: <SiNextdotjs /> },
+          { name: "Next.js", icon: <SiNextdotjs /> },
           { name: "Tailwind", icon: <SiTailwindcss color="#06B6D4" /> },
           { name: "Vercel", comment: "the best.", icon: <SiVercel /> },
+          { name: "Prisma", icon: <SiPrisma /> },
+          {
+            name: "PlanetScale",
+            comment: "no icon lol.",
+            icon: <SiPlaystation />,
+          },
         ],
       },
     ],
