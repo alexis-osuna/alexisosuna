@@ -10,10 +10,11 @@ interface Props {
 const AllPosts: React.FC<Props> = ({ posts }) => {
   return (
     <section className="mb-8">
-      <h2 className="mb-4 text-xl font-bold sm:text-2xl">All posts</h2>
-      {posts.map((post, id) => (
-        <PostCard key={id} post={post} />
-      ))}
+      <ul>
+        {posts.map((post, id) => (
+          <PostCard key={id} post={post} />
+        ))}
+      </ul>
     </section>
   );
 };
