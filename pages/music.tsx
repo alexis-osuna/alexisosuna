@@ -24,9 +24,9 @@ export async function getServerSideProps({ res }) {
 
   return {
     props: {
-      recentlyPlayed: recentlyPlayed,
-      topArtists: topArtists,
-      topTracks: topTracks,
+      recentlyPlayed,
+      topArtists,
+      topTracks,
     },
   };
 }
