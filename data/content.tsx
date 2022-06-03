@@ -2,13 +2,11 @@ import {
   SiNextdotjs,
   SiTailwindcss,
   SiTypescript,
-  SiGo,
   SiRust,
+  SiVisualstudio,
   SiVercel,
   SiNuxtdotjs,
   SiSvelte,
-  SiVisualstudio,
-  SiReact,
   SiPrisma,
   SiPlaystation,
 } from "react-icons/si";
@@ -23,7 +21,7 @@ const content = {
   nav: [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
-    { name: "Tech", href: "/tech" },
+    { name: "Signatures", href: "/signatures" },
     { name: "Blog", href: "/blog" },
     { name: "Music", href: "/music" },
   ],
@@ -33,16 +31,9 @@ const content = {
       "Hi, my name is Alexis. I started programming a couple of year ago and now I'm sad and depressed.",
     sections: [
       { title: "Education", description: "lmao" },
-      { title: "Gear", description: "Cheapest M1 Macbook Pro" },
-    ],
-    image: "/avatar.jpg",
-  },
-  tech: {
-    title: "Tech",
-    description: "What I use, I've used and want to use.",
-    sections: [
+      { title: "Gear", description: "Cheapest M1 MacBook Pro" },
       {
-        title: "My current favourites",
+        title: "Favourite tech rn",
         list: [
           {
             name: "Next.js",
@@ -71,15 +62,9 @@ const content = {
         description:
           "Stuff I want to try but I'm either too lazy or haven't had a reason to.",
         list: [
-          { name: "Rust", icon: <SiRust /> },
-          { name: "Go", icon: <SiGo color="#00ADD8" /> },
-          {
-            name: "React Native",
-            comment: "too lazy!!",
-            icon: <SiReact color="#61DAFB" />,
-          },
-          { name: "Nuxt", icon: <SiNuxtdotjs color="#00DC82" /> },
           { name: "Svelte", icon: <SiSvelte color="#FF3E00" /> },
+          { name: "Nuxt", icon: <SiNuxtdotjs color="#00DC82" /> },
+          { name: "Rust", comment: "too lazy!!", icon: <SiRust /> },
         ],
       },
       {
@@ -98,10 +83,15 @@ const content = {
         ],
       },
     ],
+    image: "/avatar.jpg",
   },
   blog: {
     title: "Blog",
     description: "Random thoughts...",
+  },
+  signatures: {
+    title: "Signatures",
+    description: "Messages people have left on my site.",
   },
   music: {
     title: "Music",
