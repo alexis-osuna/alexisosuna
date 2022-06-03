@@ -34,7 +34,7 @@ const Home: NextPage<Props> = ({ posts }) => {
           <Bio />
           <LatestPosts posts={posts} />
           <CurrentlyPlaying />
-          <Sign />
+          <Sign link={true} />
         </Container>
       </main>
     </>

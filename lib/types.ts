@@ -11,3 +11,9 @@ export type Artist = {
   image: string;
   url: string;
 };
+
+export type Signature = {
+  name: string;
+  message: string;
+  createdAt: string;
+};
