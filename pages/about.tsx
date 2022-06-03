@@ -19,8 +19,13 @@ const About: NextPage = () => {
           title={content.about.title}
           description={content.about.description}
         />
-        {content.about.sections.map(({ title, description }, id) => (
-          <Section key={id} title={title} description={description} />
+        {content.about.sections.map(({ title, description, list }, id) => (
+          <Section
+            key={id}
+            title={title}
+            description={description}
+            list={list}
+          />
         ))}
         <div className="relative w-full h-64 mb-8">
           <Image
