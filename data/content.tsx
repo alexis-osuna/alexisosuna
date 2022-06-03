@@ -21,9 +21,9 @@ const content = {
   nav: [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
-    { name: "Music", href: "/music" },
-    { name: "Blog", href: "/blog" },
     { name: "Signatures", href: "/signatures" },
+    { name: "Blog", href: "/blog" },
+    { name: "Music", href: "/music" },
   ],
   about: {
     title: "About me",
