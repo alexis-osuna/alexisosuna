@@ -68,7 +68,7 @@ const Header: React.FC = () => {
                 <a
                   className={`${
                     router.asPath === href ? "underline" : ""
-                  } hover:underline underline-offset-4`}
+                  } hover:underline underline-offset-4 decoration-red-500`}
                 >
                   {name}
                 </a>

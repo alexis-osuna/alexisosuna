@@ -17,9 +17,9 @@ const PostCard: React.FC<Props> = ({ post }) => {
         >
           {format(parseISO(post.date), "LLLL d, yyyy")}
         </time>
-        <h2 className="text-xl font-bold sm:text-2xl group-hover:underline">
+        <h3 className="text-lg font-bold sm:text-xl group-hover:underline underline-offset-4 decoration-red-500">
           {post.title}
-        </h2>
+        </h3>
       </div>
     </Link>
   );
