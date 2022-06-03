@@ -10,16 +10,14 @@ interface Props {
 const PostCard: React.FC<Props> = ({ post }) => {
   return (
     <Link href={post.url}>
-      <li className="py-4 border-b cursor-pointer border-neutral-200 dark:border-neutral-800 group">
+      <li className="py-4 border-b cursor-pointer border-neutral-200 dark:border-neutral-800">
         <time
           dateTime={post.date}
           className="text-sm text-neutral-500 sm:text-base"
         >
           {format(parseISO(post.date), "LLLL d, yyyy")}
         </time>
-        <h3 className="text-lg font-bold sm:text-xl group-hover:underline underline-offset-4 decoration-red-500">
-          {post.title}
-        </h3>
+        <h3 className="text-lg font-bold sm:text-xl">{post.title}</h3>
       </li>
     </Link>
   );
