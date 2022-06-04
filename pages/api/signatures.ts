@@ -41,6 +41,8 @@ export default async function handler(
       },
     });
 
+    await res.unstable_revalidate("/signatures");
+
     return res.status(200).json({
       name: signature.name,
       message: signature.message,

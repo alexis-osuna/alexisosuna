@@ -10,7 +10,7 @@ import AllSignatures from "components/AllSignatures";
 
 import content from "data/content";
 
-export async function getServerSideProps({ res }) {
+export async function getStaticProps() {
   const data = await prisma.signature.findMany({
     orderBy: {
       createdAt: "desc",
@@ -22,11 +22,6 @@ export async function getServerSideProps({ res }) {
     message,
     createdAt: createdAt.toString(),
   }));
-
-  res.setHeader(
-    "Cache-Control",
-    "public, s-maxage=10, stale-while-revalidate=60"
-  );
 
   return {
     props: {
