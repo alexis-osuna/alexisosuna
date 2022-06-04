@@ -14,6 +14,7 @@ const Bio: React.FC = () => {
             src={content.bio.image}
             layout="fill"
             objectFit="cover"
+            priority
             alt="Alexis Osuna"
           />
         </div>
