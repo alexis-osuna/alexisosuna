@@ -24,6 +24,7 @@ export async function getServerSideProps({ res }) {
 
   return {
     props: {
+      page: content.music,
       recentlyPlayed,
       topArtists,
       topTracks,
@@ -32,22 +33,28 @@ export async function getServerSideProps({ res }) {
 }
 
 interface Props {
+  page: {
+    title: string;
+    description: string;
+  };
   recentlyPlayed: Track[];
   topArtists: Artist[];
   topTracks: Track[];
 }
 
-const Music: NextPage<Props> = ({ recentlyPlayed, topArtists, topTracks }) => {
+const Music: NextPage<Props> = ({
+  page,
+  recentlyPlayed,
+  topArtists,
+  topTracks,
+}) => {
   return (
     <>
       <Head>
-        <title>{content.music.title}</title>
+        <title>{page.title}</title>
       </Head>
       <Container>
-        <Heading
-          title={content.music.title}
-          description={content.music.description}
-        />
+        <Heading title={page.title} description={page.description} />
         <CurrentlyPlaying />
         <RecentlyPlayed tracks={recentlyPlayed} />
         <TopArtists artists={topArtists} />

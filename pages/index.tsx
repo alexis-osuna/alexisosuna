@@ -10,18 +10,26 @@ import LatestPosts from "components/LatestPosts";
 import CurrentlyPlaying from "components/CurrentlyPlaying";
 import Sign from "components/Sign";
 
+import content from "data/content";
+
 export async function getStaticProps() {
   const posts = allPosts.sort((a, b) => {
     return compareDesc(new Date(a.date), new Date(b.date));
   });
-  return { props: { posts } };
+  return { props: { bio: content.bio, posts } };
 }
 
 interface Props {
+  bio: {
+    name: string;
+    label: string;
+    description: string;
+    image: string;
+  };
   posts: Post[];
 }
 
-const Home: NextPage<Props> = ({ posts }) => {
+const Home: NextPage<Props> = ({ bio, posts }) => {
   return (
     <>
       <Head>
@@ -31,7 +39,7 @@ const Home: NextPage<Props> = ({ posts }) => {
       </Head>
       <main>
         <Container>
-          <Bio />
+          <Bio bio={bio} />
           <LatestPosts posts={posts} />
           <CurrentlyPlaying />
           <Sign link={true} />

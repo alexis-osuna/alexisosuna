@@ -23,28 +23,25 @@ export async function getStaticProps() {
     createdAt: createdAt.toString(),
   }));
 
-  return {
-    props: {
-      signatures,
-    },
-  };
+  return { props: { page: content.signatures, signatures } };
 }
 
 interface Props {
+  page: {
+    title: string;
+    description: string;
+  };
   signatures: Signature[];
 }
 
-const Signatures: NextPage<Props> = ({ signatures }) => {
+const Signatures: NextPage<Props> = ({ page, signatures }) => {
   return (
     <>
       <Head>
-        <title>{content.signatures.title}</title>
+        <title>{page.title}</title>
       </Head>
       <Container>
-        <Heading
-          title={content.signatures.title}
-          description={content.signatures.description}
-        />
+        <Heading title={page.title} description={page.description} />
         <Sign link={false} />
         <AllSignatures signatures={signatures} />
       </Container>

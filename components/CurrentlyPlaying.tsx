@@ -4,8 +4,6 @@ import useSWR from "swr";
 import { Track } from "lib/types";
 import fetcher from "lib/fetcher";
 
-import content from "data/content";
-
 const CurrentlyPlaying: React.FC = () => {
   const { data } = useSWR<Track>("/api/currently-playing", fetcher);
   return (
@@ -31,7 +29,7 @@ const CurrentlyPlaying: React.FC = () => {
           </a>
         ) : (
           <div className="flex items-center justify-center h-48 text-center">
-            {content.notPlaying}
+            {"not listening to music rn... :("}
           </div>
         )}
       </div>

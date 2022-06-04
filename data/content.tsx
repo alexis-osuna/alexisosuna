@@ -101,7 +101,6 @@ const content = {
     title: "Oops...",
     description: "Watch where u r going!",
   },
-  notPlaying: "not listening to music rn... :(",
   email: "hi@alexisosuna.dev",
   socials: [{ name: "Github", href: "https://github.com/alexis-osuna" }],
   footer: "Website inspired by Lee Robinson",
