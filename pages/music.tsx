@@ -12,15 +12,10 @@ import TopTracks from "components/TopTracks";
 
 import content from "data/content";
 
-export async function getServerSideProps({ res }) {
+export async function getStaticProps() {
   const recentlyPlayed = await getRecentlyPlayed();
   const topArtists = await getTopArtists();
   const topTracks = await getTopTracks();
-
-  res.setHeader(
-    "Cache-Control",
-    "public, s-maxage=600, stale-while-revalidate=300"
-  );
 
   return {
     props: {
@@ -29,6 +24,7 @@ export async function getServerSideProps({ res }) {
       topArtists,
       topTracks,
     },
+    revalidate: 240,
   };
 }
 
