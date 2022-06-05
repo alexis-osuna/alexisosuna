@@ -28,12 +28,14 @@ const About: NextPage = () => {
           />
         ))}
         <div className="relative w-full h-64 mb-8">
-          <Image
-            src={content.about.image}
-            layout="fill"
-            objectFit="contain"
-            alt="Alexis Osuna"
-          />
+          <a href="/avatar.jpg">
+            <Image
+              src={content.about.image}
+              layout="fill"
+              objectFit="contain"
+              alt="Alexis Osuna"
+            />
+          </a>
         </div>
       </Container>
     </>
