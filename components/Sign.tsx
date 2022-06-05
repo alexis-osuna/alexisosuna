@@ -1,9 +1,11 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useRef } from "react";
 import Link from "next/link";
 import { useSession, signIn, signOut } from "next-auth/react";
 import { format } from "date-fns";
 import { ImSpinner2 } from "react-icons/im";
+import useSWR from "swr";
 import { Signature } from "lib/types";
+import fetcher from "lib/fetcher";
 
 interface Props {
   link: boolean;
@@ -12,27 +14,12 @@ interface Props {
 const Sign: React.FC<Props> = ({ link }) => {
   const input = useRef(null);
   const { data: session } = useSession();
-  const [status, setStatus] = useState<string>();
+  const { data } = useSWR<Signature>(
+    session?.user ? "/api/signatures" : null,
+    fetcher
+  );
   const [loading, setLoading] = useState<boolean>(false);
-  const [signature, setSignature] = useState<Signature>();
-
-  useEffect(() => {
-    if (session?.user) {
-      fetchSignature();
-    }
-  }, [session]);
-
-  const fetchSignature = async () => {
-    try {
-      const res = await fetch("/api/signatures", {
-        method: "GET",
-        headers: { "Content-Type": "application/json" },
-      });
-      setSignature(await res.json());
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  const [status, setStatus] = useState<string>();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -62,23 +49,20 @@ const Sign: React.FC<Props> = ({ link }) => {
       <h2 className="mb-4 text-xl font-bold sm:text-2xl">Sign my website</h2>
       {session?.user ? (
         <div>
-          {signature?.createdAt ? (
+          {data?.createdAt ? (
             <div className="mb-4">
               <div className="mb-4 text-center">
                 <p className="mb-2">
-                  Hi <span className="text-red-500">{signature.name}</span>! You
-                  left a message already. You said:
+                  Hi <span className="text-red-500">{data.name}</span>! You left
+                  a message already. You said:
                 </p>
                 <p className="break-words text-neutral-500">
-                  {`"${signature.message}"`}
+                  {`"${data.message}"`}
                 </p>
               </div>
               <div className="flex justify-between text-sm">
                 <time>
-                  {format(
-                    new Date(signature.createdAt),
-                    "MMM d yyyy '@' h:mm bb"
-                  )}
+                  {format(new Date(data.createdAt), "MMM d yyyy '@' h:mm bb")}
                 </time>
                 <button
                   className="hover:underline underline-offset-4 decoration-red-500"
