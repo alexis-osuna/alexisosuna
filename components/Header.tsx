@@ -32,7 +32,11 @@ const Header: React.FC = () => {
   }, [menu]);
 
   const toggleMenu = () => setMenu(!menu);
-  const hideMenu = () => setMenu(false);
+  const hideMenu = () => {
+    setTimeout(() => {
+      setMenu(false);
+    }, 200);
+  };
 
   const themeToggle = () => {
     if (!mounted) return null;
