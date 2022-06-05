@@ -9,9 +9,10 @@ interface Props {
     description: string;
     image: string;
   };
+  quote: string;
 }
 
-const Bio: React.FC<Props> = ({ bio }) => {
+const Bio: React.FC<Props> = ({ bio, quote }) => {
   return (
     <section className="flex flex-col items-center mb-8 text-center">
       <Link href="/about">
@@ -19,7 +20,7 @@ const Bio: React.FC<Props> = ({ bio }) => {
           <Image
             className="rounded-full"
             src={bio.image}
-            alt="Alexis Osuna"
+            alt={bio.name}
             layout="fill"
             objectFit="cover"
             priority
@@ -30,7 +31,7 @@ const Bio: React.FC<Props> = ({ bio }) => {
         <h1 className="text-2xl font-bold sm:text-4xl">{bio.name}</h1>
         <h2>{bio.label}</h2>
       </div>
-      <p className="text-neutral-500">{bio.description}</p>
+      <p className="max-w-lg text-neutral-500">{quote}</p>
     </section>
   );
 };

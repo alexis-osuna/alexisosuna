@@ -13,10 +13,13 @@ import Sign from "components/Sign";
 import content from "data/content";
 
 export async function getStaticProps() {
+  const res = await fetch("https://api.kanye.rest/");
+  const { quote } = await res.json();
+
   const posts = allPosts.sort((a, b) => {
     return compareDesc(new Date(a.date), new Date(b.date));
   });
-  return { props: { bio: content.bio, posts } };
+  return { props: { bio: content.bio, quote, posts }, revalidate: 86400 };
 }
 
 interface Props {
@@ -26,10 +29,11 @@ interface Props {
     description: string;
     image: string;
   };
+  quote: string;
   posts: Post[];
 }
 
-const Home: NextPage<Props> = ({ bio, posts }) => {
+const Home: NextPage<Props> = ({ bio, quote, posts }) => {
   return (
     <>
       <Head>
@@ -39,7 +43,7 @@ const Home: NextPage<Props> = ({ bio, posts }) => {
       </Head>
       <main>
         <Container>
-          <Bio bio={bio} />
+          <Bio bio={bio} quote={quote} />
           <LatestPosts posts={posts} />
           <CurrentlyPlaying />
           <Sign link={true} />
