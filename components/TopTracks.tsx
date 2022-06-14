@@ -15,8 +15,8 @@ const TopTracks: React.FC<Props> = ({ tracks }) => {
     <section className="mb-8">
       <h2 className="mb-4 text-xl font-bold sm:text-2xl">Top tracks</h2>
       <ul className="grid gap-4 sm:grid-cols-2">
-        {tracks.map(({ title, artist, album, image, url }, id) => (
-          <a key={id} href={url} target="_blank" rel="noreferrer">
+        {tracks.map(({ title, artist, album, image, url }, i) => (
+          <a key={i} href={url} target="_blank" rel="noreferrer">
             <li className="grid grid-cols-2">
               <div className="relative w-full h-36">
                 <Image

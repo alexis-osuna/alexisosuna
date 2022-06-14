@@ -8,8 +8,8 @@ const Footer: React.FC = () => {
     <footer className="w-full mb-8">
       <nav className="py-8 border-t border-neutral-500">
         <ul className="grid grid-cols-2 sm:grid-cols-3">
-          {content.nav.map(({ name, href }, id) => (
-            <li key={id} className="p-2">
+          {content.nav.map(({ name, href }, i) => (
+            <li key={i} className="p-2">
               <Link href={href}>
                 <a className="hover:text-neutral-900 dark:hover:text-neutral-50 text-neutral-500">
                   {name}
@@ -17,8 +17,8 @@ const Footer: React.FC = () => {
               </Link>
             </li>
           ))}
-          {content.socials.map(({ name, href }, id) => (
-            <li key={id} className="p-2">
+          {content.socials.map(({ name, href }, i) => (
+            <li key={i} className="p-2">
               <a
                 href={href}
                 className="hover:text-neutral-900 dark:hover:text-neutral-50 text-neutral-500"

@@ -19,9 +19,9 @@ const About: NextPage = () => {
           title={content.about.title}
           description={content.about.description}
         />
-        {content.about.sections.map(({ title, description, list }, id) => (
+        {content.about.sections.map(({ title, description, list }, i) => (
           <Section
-            key={id}
+            key={i}
             title={title}
             description={description}
             list={list}

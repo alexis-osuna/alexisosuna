@@ -13,8 +13,8 @@ const LatestPosts: React.FC<Props> = ({ posts }) => {
     <section className="mb-8">
       <h2 className="mb-4 text-xl font-bold sm:text-2xl">Latest posts</h2>
       <ul className="mb-4">
-        {posts.slice(0, 3).map((post, id) => (
-          <PostCard key={id} post={post} />
+        {posts.slice(0, 3).map((post, i) => (
+          <PostCard key={i} post={post} />
         ))}
       </ul>
       <Link href="/blog">

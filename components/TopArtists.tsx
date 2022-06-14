@@ -15,8 +15,8 @@ const TopArtists: React.FC<Props> = ({ artists }) => {
     <section className="mb-8">
       <h2 className="mb-4 text-xl font-bold sm:text-2xl">Top artists</h2>
       <ul className="grid grid-cols-2 gap-4 sm:grid-cols-6">
-        {artists.map(({ name, image, url }, id) => (
-          <a key={id} href={url} target="_blank" rel="noreferrer">
+        {artists.map(({ name, image, url }, i) => (
+          <a key={i} href={url} target="_blank" rel="noreferrer">
             <li className="flex flex-col items-center">
               <div className="relative w-24 h-24 mb-2">
                 <Image

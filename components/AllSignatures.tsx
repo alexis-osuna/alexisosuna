@@ -10,9 +10,9 @@ const AllSignatures: React.FC<Props> = ({ signatures }) => {
   return (
     <section className="mb-8">
       <ul>
-        {signatures.map(({ name, message, createdAt }, id) => (
+        {signatures.map(({ name, message, createdAt }, i) => (
           <li
-            key={id}
+            key={i}
             className="py-4 border-b border-neutral-200 dark:border-neutral-800"
           >
             <p className="mb-2">{message}</p>

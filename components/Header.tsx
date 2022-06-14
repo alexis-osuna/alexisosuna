@@ -66,8 +66,8 @@ const Header: React.FC = () => {
     <header className="w-full">
       <nav className="flex items-center justify-between h-24">
         <ul className="hidden space-x-8 md:flex">
-          {content.nav.map(({ name, href }, id) => (
-            <li key={id}>
+          {content.nav.map(({ name, href }, i) => (
+            <li key={i}>
               <Link href={href}>
                 <a
                   className={`${

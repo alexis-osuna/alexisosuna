@@ -18,8 +18,8 @@ const Section: React.FC<Props> = ({ title, description, list }) => {
       {description && <p className="mb-4 text-neutral-500">{description}</p>}
       {list && (
         <ul>
-          {list.map(({ name, comment, icon }, id) => (
-            <li key={id} className="mb-2">
+          {list.map(({ name, comment, icon }, i) => (
+            <li key={i} className="mb-2">
               <IconContext.Provider
                 value={{
                   style: { display: "inline", marginRight: "0.5rem" },

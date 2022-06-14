@@ -11,8 +11,8 @@ const AllPosts: React.FC<Props> = ({ posts }) => {
   return (
     <section className="mb-8">
       <ul>
-        {posts.map((post, id) => (
-          <PostCard key={id} post={post} />
+        {posts.map((post, i) => (
+          <PostCard key={i} post={post} />
         ))}
       </ul>
     </section>
