@@ -28,7 +28,7 @@ const About: NextPage = () => {
           />
         ))}
         <div className="relative w-full h-64 mb-8">
-          <a href="/avatar.jpg">
+          <a href={content.about.image}>
             <Image
               src={content.about.image}
               layout="fill"

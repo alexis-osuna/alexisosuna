@@ -5,6 +5,6 @@ const { withContentlayer } = require("next-contentlayer");
 module.exports = withContentlayer({
   reactStrictMode: true,
   images: {
-    domains: ["i.scdn.co"],
+    domains: ["i.scdn.co", "alexisosuna.s3.us-west-1.amazonaws.com"],
   },
 });

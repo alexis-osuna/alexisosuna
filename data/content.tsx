@@ -21,8 +21,8 @@ const content = {
   nav: [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
-    { name: "Signatures", href: "/signatures" },
     { name: "Blog", href: "/blog" },
+    { name: "Shop", href: "/shop" },
     { name: "Music", href: "/music" },
   ],
   about: {
@@ -93,6 +93,10 @@ const content = {
     title: "Signatures",
     description: "Messages people have left on my site.",
   },
+  shop: {
+    title: "Shop",
+    description: "Give me your money!",
+  },
   music: {
     title: "Music",
     description: "What I'm currently listening to (probably Yeat).",
@@ -100,6 +104,11 @@ const content = {
   notFound: {
     title: "Oops...",
     description: "Watch where u r going!",
+  },
+  success: {
+    title: "YOU JUST GOT SCAMMED!",
+    description: "Thanks for the money kiddo.",
+    image: "/emoji.png",
   },
   email: "hi@alexisosuna.dev",
   socials: [{ name: "Github", href: "https://github.com/alexis-osuna" }],
