@@ -9,13 +9,14 @@ import {
   SiSvelte,
   SiPrisma,
   SiPlaystation,
+  SiStripe,
+  SiStrapi,
 } from "react-icons/si";
 
 const content = {
   bio: {
     name: "Alexis Osuna",
     label: "Web Developer",
-    description: "Trying to keep up with all this tech!",
     image: "/avatar.jpg",
   },
   nav: [
@@ -77,8 +78,19 @@ const content = {
           { name: "Prisma", icon: <SiPrisma /> },
           {
             name: "PlanetScale",
-            comment: "no icon lol.",
+            comment: "stores signatures.",
             icon: <SiPlaystation />,
+          },
+          {
+            name: "Stripe",
+            comment: "handles payments in the shop.",
+            icon: <SiStripe color="#008CDD" />,
+          },
+          {
+            name: "Strapi",
+            comment:
+              "provides product data and images stored in S3. over-engineered website i know... but i really wanted to try this things!",
+            icon: <SiStrapi color="#2F2E8B" />,
           },
         ],
       },
@@ -113,7 +125,7 @@ const content = {
   email: "hi@alexisosuna.dev",
   socials: [{ name: "Github", href: "https://github.com/alexis-osuna" }],
   footer: "Website inspired by Lee Robinson",
-  copyright: "© 2022 Alexis Osuna.",
+  copyright: "Alexis Osuna.",
 };
 
 export default content;

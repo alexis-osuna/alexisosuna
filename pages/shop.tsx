@@ -26,7 +26,7 @@ export async function getStaticProps() {
     .sort((a, b) => {
       return a.price - b.price;
     });
-  return { props: { page: content.shop, products }, revalidate: 3600 };
+  return { props: { page: content.shop, products } };
 }
 
 interface Props {

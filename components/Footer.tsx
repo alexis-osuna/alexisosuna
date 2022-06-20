@@ -32,7 +32,9 @@ const Footer: React.FC = () => {
         </ul>
       </nav>
       <p className="mb-2 text-sm text-neutral-500">{content.footer}</p>
-      <p className="text-sm">{`${content.copyright} ${content.email}`}</p>
+      <p className="text-sm">
+        © {new Date().getFullYear()} {content.copyright} {content.email}
+      </p>
     </footer>
   );
 };
