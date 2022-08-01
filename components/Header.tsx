@@ -66,19 +66,24 @@ const Header: React.FC = () => {
     <header className="w-full">
       <nav className="flex items-center justify-between h-24">
         <ul className="hidden space-x-8 md:flex">
-          {content.nav.map(({ name, href }, i) => (
-            <li key={i}>
-              <Link href={href}>
-                <a
-                  className={`${
-                    router.asPath === href ? "underline" : ""
-                  } hover:underline underline-offset-4 decoration-red-500`}
-                >
-                  {name}
-                </a>
-              </Link>
-            </li>
-          ))}
+          {content.nav.map(({ name, href, header }, i) => {
+            if (!header) {
+              return;
+            }
+            return (
+              <li key={i}>
+                <Link href={href}>
+                  <a
+                    className={`${
+                      router.asPath === href ? "underline" : ""
+                    } hover:underline underline-offset-4 decoration-red-500`}
+                  >
+                    {name}
+                  </a>
+                </Link>
+              </li>
+            );
+          })}
         </ul>
         <div className="flex cursor-pointer md:hidden" onClick={toggleMenu}>
           {menu ? (

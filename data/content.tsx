@@ -20,12 +20,12 @@ const content = {
     image: "/avatar.jpg",
   },
   nav: [
-    { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
-    { name: "Blog", href: "/blog" },
-    { name: "Signatures", href: "/signatures" },
-    { name: "Shop", href: "/shop" },
-    { name: "Music", href: "/music" },
+    { name: "Home", href: "/", header: true },
+    { name: "About", href: "/about", header: true },
+    { name: "Blog", href: "/blog", header: true },
+    { name: "Signatures", href: "/signatures", header: false },
+    { name: "Shop", href: "/shop", header: true },
+    { name: "Music", href: "/music", header: true },
   ],
   about: {
     title: "About me",
