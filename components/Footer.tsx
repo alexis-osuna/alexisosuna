@@ -17,6 +17,18 @@ const Footer: React.FC = () => {
               </Link>
             </li>
           ))}
+          {content.links.map(({ name, href }, i) => (
+            <li key={i} className="p-2">
+              <a
+                href={href}
+                className="hover:text-neutral-900 dark:hover:text-neutral-50 text-neutral-500"
+                target="_blank"
+                rel="noreferrer"
+              >
+                {name}
+              </a>
+            </li>
+          ))}
           {content.socials.map(({ name, href }, i) => (
             <li key={i} className="p-2">
               <a

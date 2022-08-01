@@ -23,6 +23,7 @@ const content = {
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
     { name: "Blog", href: "/blog" },
+    { name: "Signatures", href: "/signatures" },
     { name: "Shop", href: "/shop" },
     { name: "Music", href: "/music" },
   ],
@@ -124,6 +125,12 @@ const content = {
   },
   email: "hi@alexisosuna.dev",
   socials: [{ name: "Github", href: "https://github.com/alexis-osuna" }],
+  links: [
+    {
+      name: "Practice",
+      href: "https://practice.alexisosuna.dev",
+    },
+  ],
   footer: "Website inspired by Lee Robinson",
   copyright: "Alexis Osuna.",
 };
