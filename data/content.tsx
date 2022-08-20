@@ -8,7 +8,7 @@ import {
   SiNuxtdotjs,
   SiSvelte,
   SiPrisma,
-  SiPlaystation,
+  SiRailway,
   SiStripe,
   SiStrapi,
 } from "react-icons/si";
@@ -78,9 +78,9 @@ const content = {
           { name: "Vercel", comment: "the best.", icon: <SiVercel /> },
           { name: "Prisma", icon: <SiPrisma /> },
           {
-            name: "PlanetScale",
+            name: "Railway",
             comment: "stores signatures.",
-            icon: <SiPlaystation />,
+            icon: <SiRailway />,
           },
           {
             name: "Stripe",
