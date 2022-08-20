@@ -3,9 +3,8 @@ import {
   SiTailwindcss,
   SiTypescript,
   SiRust,
-  SiVisualstudio,
   SiVercel,
-  SiNuxtdotjs,
+  SiGo,
   SiSvelte,
   SiPrisma,
   SiRailway,
@@ -39,7 +38,7 @@ const content = {
         list: [
           {
             name: "Next.js",
-            comment: "still learning it atm.",
+            comment: "<3.",
             icon: <SiNextdotjs />,
           },
           {
@@ -50,12 +49,7 @@ const content = {
           },
           {
             name: "Typescript",
-            comment: "<3.",
             icon: <SiTypescript color="#3178C6" />,
-          },
-          {
-            name: "VSCode",
-            icon: <SiVisualstudio color="#007ACC" />,
           },
         ],
       },
@@ -65,7 +59,7 @@ const content = {
           "Stuff I want to try but I'm either too lazy or haven't had a reason to.",
         list: [
           { name: "Svelte", icon: <SiSvelte color="#FF3E00" /> },
-          { name: "Nuxt", icon: <SiNuxtdotjs color="#00DC82" /> },
+          { name: "Go", icon: <SiGo color="#00ADD8" /> },
           { name: "Rust", comment: "too lazy!!", icon: <SiRust /> },
         ],
       },
@@ -75,13 +69,8 @@ const content = {
           { name: "Typescript", icon: <SiTypescript color="#3178C6" /> },
           { name: "Next.js", icon: <SiNextdotjs /> },
           { name: "Tailwind", icon: <SiTailwindcss color="#06B6D4" /> },
-          { name: "Vercel", comment: "the best.", icon: <SiVercel /> },
           { name: "Prisma", icon: <SiPrisma /> },
-          {
-            name: "Railway",
-            comment: "stores signatures.",
-            icon: <SiRailway />,
-          },
+          { name: "Vercel", icon: <SiVercel /> },
           {
             name: "Stripe",
             comment: "handles payments in the shop.",
